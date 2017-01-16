@@ -88,7 +88,7 @@ app.intent('HairIntent', {
 //
 //
 app.intent('DressIntent', {
-    "utterances": ['How does this {dress|outfit|suit} look', 'Does this {dress|outfit|suit} fit']
+    "utterances": ['How does this {dress|outfit|suit} look', 'Does this {dress|outfit|suit} fit', 'How this {dress|outfit|suit} looks']
 }, function(req, res){
     var str = getRandomStr(dressStrings);
     res.say(str);
