@@ -11,19 +11,33 @@ var app = new Alexa.app('vanity');
 //
 var lookStrings = [
     "You look marvelous",
-    "You look amazing"
+    "You look amazing",
+    "You've never looked better",
+    "You are so good looking",
+    "You look great to me, but then I don't have eyes",
+    "A brave new look for you",
+    "Do you really want to know?",
+    "To be honest you've looked better",
+    "If you have to ask you already know the answer"
 ];
 
 //
 var hairStrings = [
     "Your hair looks radiant!",
-    "It has never looked better"
+    "It has never looked better",
+    "I like the new color!",
+    "Very trendy style",
+    "I saw the same style on TV the other day"
 ];
 
 //
-var dressStrings = [
-    "That dress fits you perfectly",
-    "That dress was made for you"
+var outfitStrings = [
+    "That fits you perfectly",
+    "That outfit was made for you",
+    "Very trendy look",
+    "The color suits you pefectly",
+    "I have one just like it",
+    "I admire you for taking the chance on that outfit"
 ];
 
 //
@@ -74,9 +88,9 @@ app.intent('HairIntent', {
 //
 //
 app.intent('DressIntent', {
-    "utterances": ['How does this dress look', 'Does this dress fit']
+    "utterances": ['How does this {dress|outfit|suit} look', 'Does this {dress|outfit|suit} fit']
 }, function(req, res){
-    var str = getRandomStr(hairStrings);
+    var str = getRandomStr(dressStrings);
     res.say(str);
 });
 
